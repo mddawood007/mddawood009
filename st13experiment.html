@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: #e63946;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            background: #1d3557;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #457b9d;
+        }
+
+        /* --------------------------
+            RESPONSIVE BREAKPOINTS
+        --------------------------- */
+
+        /* Tablets (max 900px) → 2 items per row */
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile Phones (max 600px) → 1 item per row */
+        @media (max-width: 600px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Product Grid</h1>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product">
+            <h3>Smart Watch</h3>
+            <p class="price">₹1,999</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product">
+            <h3>Bluetooth Speaker</h3>
+            <p class="price">₹899</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product">
+            <h3>Headphones</h3>
+            <p class="price">₹1,499</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="Product">
+            <h3>Power Bank</h3>
+            <p class="price">₹699</p>
+            <button class="btn">Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Responsive Navbar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR CONTAINER */
+        .navbar {
+            background: #1d3557;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        /* LOGO */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* NAV LINKS */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a8dadc;
+        }
+
+        /* CART BUTTON */
+        .cart-btn {
+            background: #e63946;
+            padding: 8px 15px;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cart-btn:hover {
+            background: #d62828;
+        }
+
+        /* HAMBURGER ICON (HIDDEN ON PC) */
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* -----------------------
+            RESPONSIVE DESIGN
+        ------------------------*/
+
+        /* MOBILE (max 768px) */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: #1d3557;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                display: none;
+            }
+
+            .nav-links a {
+                padding: 12px 0;
+                display: block;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .cart-btn {
+                display: none;
+            }
+        }
+    </style>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const nav = document.getElementById("nav-links");
+            nav.style.display = (nav.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">ShopEase</div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Deals</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <button class="cart-btn">Cart</button>
+    </div>
+
+</body>
+</html>

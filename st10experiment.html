@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .product-container {
+            width: 900px;
+            background: #fff;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .product-box {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-image {
+            width: 350px;
+            height: 350px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background: #fafafa;
+        }
+
+        .product-details {
+            width: 500px;
+        }
+
+        .product-details h2 {
+            margin: 0;
+            font-size: 28px;
+            color: #222;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #E63946;
+            margin: 10px 0;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            background: #1D3557;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #457B9D;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="product-container">
+    <div class="product-box">
+
+        <!-- Product Image -->
+        <img src="https://via.placeholder.com/350" alt="Product Image" class="product-image">
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h2>Wireless Headphones Pro X1</h2>
+            <p class="price">₹2,499</p>
+
+            <p class="description">
+                Experience premium sound quality with the Pro X1 Wireless Headphones.
+                Designed for comfort and long listening sessions. Features Bluetooth 5.0,
+                noise cancellation, long battery life, and built-in microphone.
+            </p>
+
+            <button class="btn">Add to Cart</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
